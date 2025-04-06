@@ -9,7 +9,7 @@ def actividad1():
         except ValueError:
             print("Por favor ingrese un número válido.")
 
-    if edad > 18:
+    if edad >= 18:
         print("Es mayor de edad")
     else:
         print("No es mayor de edad")
@@ -151,26 +151,6 @@ def actividad9():
     else:
         print("Extremo (puede causar graves daños a gran escala)")
 
-def ejecutar_actividad(numero_actividad):
-    actividades = {
-        1: actividad1,
-        2: actividad2,
-        3: actividad3,
-        4: actividad4,
-        5: actividad5,
-        6: actividad6,
-        7: actividad7,
-        8: actividad8,
-        9: actividad9,
-    }
-
-    if numero_actividad in actividades:
-        actividades[numero_actividad]()
-        return True
-    else:
-        print("Número de actividad inválido.")
-        return False
-    
 def actividad10():
     while True:
         hemisferio = input("¿En qué hemisferio estás? (N/S): ").strip().upper()
@@ -219,6 +199,27 @@ def actividad10():
     else:
         print("Estás en la estación:", estacion_sur)
 
+def ejecutar_actividad(numero_actividad):
+    actividades = {
+        1: actividad1,
+        2: actividad2,
+        3: actividad3,
+        4: actividad4,
+        5: actividad5,
+        6: actividad6,
+        7: actividad7,
+        8: actividad8,
+        9: actividad9,
+        10: actividad10,
+    }
+
+    if numero_actividad in actividades:
+        actividades[numero_actividad]()
+        return True
+    else:
+        print("Número de actividad inválido.")
+        return False
+    
 def main():
   while True:
     try:
